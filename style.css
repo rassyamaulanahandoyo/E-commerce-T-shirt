@@ -1,0 +1,455 @@
+/* General Styling */
+/* General Styling */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #ffffff; /* Gold color for hover */
+}
+
+/* Hero Section */
+#hero {
+    background-color: #000000;/* Ganti dengan gambar latar belakang Anda */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+#hero h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #fffffd;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: none; /* Add border none for consistency */
+    cursor: pointer; /* Add cursor pointer */
+}
+
+.btn:hover {
+    background-color: #f2f2f0;
+}
+
+/* Product Section */
+#produk, #tentang, #kontak, #keranjang, #faq, #product-detail {
+    padding: 50px 0;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#produk h2, #tentang h2, #kontak h2, #keranjang h2, #faq h2, #product-detail h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Filter Controls */
+.filter-controls {
+    text-align: right;
+    margin-bottom: 20px;
+    padding-right: 20px; /* Adjust padding as needed */
+}
+
+.filter-controls label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.filter-controls select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.product-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex; /* Make it a flex container */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Push button to bottom */
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+}
+
+.product-item img {
+    max-width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: contain; /* Ensure image fits without distortion */
+    margin-bottom: 15px;
+}
+
+.product-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-item p {
+    font-size: 18px;
+    color: #666;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.product-item button {
+    background-color: #1e3c5c;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Push button to the bottom */
+}
+
+.product-item button:hover {
+    background-color: #364454;
+}
+
+.product-item a { /* Style for links around product images */
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent */
+}
+
+/* About Us Section */
+#tentang p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+#kontak ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+#kontak ul li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+/* FAQ Section */
+#faq .faq-item {
+    background-color: #f0f0f0;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+#faq .faq-item h3 {
+    margin-top: 0;
+    color: #162e47;
+    cursor: pointer; /* Indicate it's clickable for future accordion */
+}
+
+#faq .faq-item p {
+    margin-bottom: 0;
+    line-height: 1.6;
+    /* For future accordion, can be display: none; */
+}
+
+
+/* Shopping Cart Section */
+#keranjang {
+    background-color: #e9ecef;
+}
+
+#keranjang #cart-items {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8f9fa;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.cart-item-info {
+    flex-grow: 1;
+}
+
+.cart-item-info h4 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.cart-item-info p {
+    margin: 5px 0 0;
+    color: #666;
+}
+
+.cart-item-controls {
+    display: flex;
+    align-items: center;
+}
+
+.cart-item-controls button {
+    background-color: #0d0c0c;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.cart-item-controls button.quantity-btn {
+    background-color: #6c757d;
+}
+
+.cart-item-controls span {
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.cart-summary {
+    text-align: right;
+    border-top: 2px solid #333;
+    padding-top: 20px;
+    margin-top: 30px;
+}
+
+.cart-summary h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.cart-summary .btn {
+    margin-left: 10px;
+}
+
+.cart-summary .clear-cart-btn {
+    background-color: #f5f0f1;
+}
+
+.cart-summary .clear-cart-btn:hover {
+    background-color: #e6e3e3;
+}
+
+
+/* Product Detail Page */
+#product-detail .product-detail-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.product-detail-image {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.product-detail-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-detail-info {
+    flex: 1.5;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.product-detail-info h2 {
+    text-align: left;
+    margin-top: 0;
+    font-size: 36px;
+    color: #333;
+}
+
+.product-detail-info .product-price {
+    font-size: 28px;
+    color: #272f38;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.product-detail-info .product-description {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.product-detail-info .product-options label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.product-detail-info .product-options select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.product-detail-info .btn {
+    margin-top: 30px;
+    font-size: 18px;
+    padding: 12px 25px;
+}
+
+.product-detail-info .back-to-products {
+    background-color: #6c757d;
+    margin-left: 10px;
+}
+
+.product-detail-info .back-to-products:hover {
+    background-color: #5a6268;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav ul {
+        margin-top: 10px;
+    }
+
+    header nav ul li {
+        margin: 0 10px;
+    }
+
+    #hero h2 {
+        font-size: 36px;
+    }
+
+    #hero p {
+        font-size: 18px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #product-detail .product-detail-container {
+        flex-direction: column;
+    }
+
+    .product-detail-info h2 {
+        text-align: center;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-item-controls {
+        margin-top: 10px;
+    }
+}

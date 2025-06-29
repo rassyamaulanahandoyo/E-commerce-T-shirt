@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HERMOSA ESTRELLA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>H R M S</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#produk">Produk</a></li>
+                    <li><a href="#tentang">About Us</a></li>
+                    <li><a href="#keranjang">Keranjang <span id="cart-count">(0)</span></a></li> </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h2>Hermosa Estrella</h2>
+                <p>Hermosa Look Of The Day</p>
+                <a href="#produk" class="btn">Lihat Produk</a>
+            </div>
+        </section>
+
+        <section id="produk">
+            <div class="container">
+                <h2>Produk Terbaru</h2>
+                <div class="filter-controls">
+                    <label for="sort-price">Urutkan Harga:</label>
+                    <select id="sort-price">
+                        <option value="default">Default</option>
+                        <option value="low-to-high">Termurah ke Termahal</option>
+                        <option value="high-to-low">Termahal ke Termurah</option>
+                    </select>
+                </div>
+
+                <div class="product-grid" id="product-list">
+                    <div class="product-item" data-price="150000">
+                        <a href="product-detail.html?id=V1">
+                            <img src="V1.png" alt="HRMS V1">
+                            <h3>HRMS V1</h3>
+                            <p>Rp 150.000</p>
+                        </a>
+                        <button class="add-to-cart" data-id="V1" data-name="HRMS V1" data-price="150000">Tambah ke Keranjang</button>
+                    </div>
+                    <div class="product-item" data-price="180000">
+                        <a href="product-detail.html?id=V2">
+                            <img src="V2.png" alt="HRMS V2">
+                            <h3>HRMS V2</h3>
+                            <p>Rp 180.000</p>
+                        </a>
+                        <button class="add-to-cart" data-id="V2" data-name="HRMS V2" data-price="180000">Tambah ke Keranjang</button>
+                    </div>
+                    <div class="product-item" data-price="120000">
+                        <a href="product-detail.html?id=V3">
+                            <img src="V3.png" alt="HRMS V3">
+                            <h3>HRMS V3</h3>
+                            <p>Rp 120.000</p>
+                        </a>
+                        <button class="add-to-cart" data-id="V3" data-name="HRMS V3" data-price="120000">Tambah ke Keranjang</button>
+                    </div>
+                    <div class="product-item" data-price="350000">
+                        <a href="product-detail.html?id=V4">
+                            <img src="V4.png" alt="HRMS V4">
+                            <h3>HRMS V4</h3>
+                            <p>Rp 350.000</p>
+                        </a>
+                        <button class="add-to-cart" data-id="V4" data-name="HRMS V4" data-price="350000">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="keranjang" class="hidden"> <div class="container">
+                <h2>Keranjang Belanja Anda</h2>
+                <div id="cart-items">
+                    <p>Keranjang Anda kosong.</p>
+                </div>
+                <div class="cart-summary">
+                    <h3>Total: Rp <span id="cart-total">0</span></h3>
+                    <button class="btn">Lanjutkan ke Pembayaran</button>
+                    <button class="btn clear-cart-btn">Bersihkan Keranjang</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="tentang">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>Toko Baju Kami berkomitmen untuk menyediakan pakaian berkualitas tinggi dengan desain yang fashionable. Kami percaya bahwa gaya adalah ekspresi diri, dan kami ingin membantu Anda menemukannya.</p>
+            </div>
+        </section>
+
+        <section id="kontak">
+            <div class="container">
+                <h2>Contact</h2>
+                <ul>
+                    <li>Email: elviorussel@gmail.com</li>
+                    <li>Telepon: +62 812-1015-5344</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; Hermosa Estrella</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script> </body>
+</html>

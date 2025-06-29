@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Produk - HERMOSA ESTRELLA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>HRMS</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#produk">Produk</a></li>
+                    <li><a href="index.html#tentang">About Us</a></li>
+
+                    <li><a href="index.html#kontak">Contact</a></li>
+                    <li><a href="index.html#keranjang">Keranjang <span id="cart-count-detail">(0)</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="product-detail">
+            <div class="container product-detail-container">
+                <div class="product-detail-image">
+                    <img id="product-image" src="" alt="Product Image">
+                </div>
+                <div class="product-detail-info">
+                    <h2 id="product-name"></h2>
+                    <p class="product-price" id="product-price"></p>
+                    <p class="product-description">
+                        Ini adalah deskripsi detail untuk produk ini. Terbuat dari bahan berkualitas tinggi, nyaman dipakai, dan cocok untuk gaya kasual maupun formal. Tersedia dalam berbagai ukuran.
+                    </p>
+                    <div class="product-options">
+                        <label for="size-select">Ukuran:</label>
+                        <select id="size-select">
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                    </div>
+                    <button class="btn add-to-cart-detail" data-id="" data-name="" data-price="">Tambah ke Keranjang</button>
+                    <a href="index.html#produk" class="btn back-to-products">Kembali ke Produk</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; Hermosa Estrella</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script> <script>
+        // JavaScript untuk memuat detail produk berdasarkan ID dari URL
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+
+            // Data produk (simulasi, seharusnya dari database)
+            const products = {
+                'V1': { name: 'HRMS V1', price: 150000, image: 'V1.png', description: 'Kemeja kasual terbaik untuk gaya sehari-hari Anda.' },
+                'V2': { name: 'HRMS V2', price: 180000, image: 'V2.png', description: 'Celana jeans modern dengan potongan ramping dan nyaman.' },
+                'V3': { name: 'HRMS V3', price: 120000, image: 'V3.png', description: 'Kaos oversized yang stylish dan serbaguna.' },
+                'V4': { name: 'HRMS V4', price: 350000, image: 'V4.png', description: 'Jaket kulit premium untuk tampilan yang edgy dan berkelas.' }
+            };
+
+            const product = products[productId];
+
+            if (product) {
+                document.getElementById('product-image').src = product.image;
+                document.getElementById('product-image').alt = product.name;
+                document.getElementById('product-name').textContent = product.name;
+                document.getElementById('product-price').textContent = `Rp ${product.price.toLocaleString('id-ID')}`;
+                document.querySelector('.product-description').textContent = product.description;
+
+                const addToCartBtn = document.querySelector('.add-to-cart-detail');
+                addToCartBtn.dataset.id = productId;
+                addToCartBtn.dataset.name = product.name;
+                addToCartBtn.dataset.price = product.price;
+
+                // Update cart count if script.js is already loaded
+                if (typeof updateCartCount === 'function') {
+                    updateCartCount();
+                }
+            } else {
+                document.getElementById('product-detail').innerHTML = '<div class="container"><h2>Produk tidak ditemukan.</h2><p><a href="index.html#produk">Kembali ke daftar produk</a></p></div>';
+            }
+        });
+    </script>
+</body>
+</html>
