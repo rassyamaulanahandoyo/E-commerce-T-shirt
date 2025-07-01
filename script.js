@@ -191,6 +191,15 @@ document.addEventListener('DOMContentLoaded', () => {
         cartSection.classList.remove('hidden');
         renderCartItems();
     }
+
+    document.getElementById("checkout-btn").addEventListener("click", function () {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        if (cart.length === 0) {
+            alert("Keranjang kosong. Silakan tambahkan produk terlebih dahulu.");
+        } else {
+            window.location.href = "checkout.html";
+        }
+    });
 });
 window.addEventListener('load', () => {
     document.body.classList.add('fade-in');

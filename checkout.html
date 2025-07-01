@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang = "id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Checkout - Hermosa Estrella</title>
+    <link rel = "stylesheet" href = "style.css"/>
+
+</head>
+<body>
+    <header>
+        <div class = "container">
+            <h1>HRMS</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#produk">Produk</a></li>
+                    <li><a href="index.html#keranjang">Keranjang <span id="cart-count">(0)</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id = "checkout" class = "container">
+            <h2>Checkout</h2>
+            <div id = "checkout-barang" class = "cart-summary"></div>
+            <form id = "checkout-form" class = "checkout-form">
+                <h3>Informasi Pengiriman</h3>
+                <label>Nama Lengkap:</label>
+                <input type = "text" required />
+
+                <label>Alamat Lengkap:</label>
+                <textarea rows = "3" required></textarea>
+
+                <label>No. Telepon</label>
+                <input type = "tel" required />
+
+                <label>Metode Pembayaran</label>
+                <select required>
+                    <option value = "">Pilih metode</option>
+                    <option value = "transfer">Transfer Bank</option>
+                    <option value = "cod">COD (Bayar di Tempat)</option>
+                </select>
+                <button type = "submit" class = "btn">Konfirmasi Pembelian</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class = "container">
+            <p>&copy; Hermosa Estrella</p>
+        </div>
+    </footer>
+    <script>
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const cartSummary = document.getElementById("checkout-barang");
+        const cartCount = document.getElementById("cart-count");
+
+        function renderCheckoutItems() {
+            if (cart.length === 0) {
+                cartSummary.innerHTML = "<p>Keranjang kosong.</p>";
+                return;
+            }
+
+            let total = 0;
+            const list = document.createElement("ul");
+            cart.forEach(item => {
+                total += item.price * item.quantity;
+                const li = document.createElement("li");
+                li.textContent = `${item.name} - Rp ${item.price.toLocaleString('id-ID')} x ${item.quantity}`;
+                list.appendChild(li);
+            });
+
+            cartSummary.innerHTML = "";
+            cartSummary.appendChild(list);
+            const totalElem = document.createElement("p");
+            totalElem.innerHTML = `<strong>Total: Rp ${total.toLocaleString('id-ID')}</strong>`;
+            cartSummary.appendChild(totalElem);
+
+            cartCount.textContent = `(${cart.reduce((a, b) => a + b.quantity, 0)})`;
+        }
+
+        document.getElementById("checkout-form").addEventListener("submit", function(e) {
+            e.preventDefault();
+            alert("Pesanan Anda telah dikonfirmasi!");
+            localStorage.removeItem("cart");
+            window.location.href = "index.html";
+        });
+
+        renderCheckoutItems();
+        window.addEventListener('load', function () {
+            document.body.classList.add('fade-in');
+        });
+    </script>
+</body>
+</html>

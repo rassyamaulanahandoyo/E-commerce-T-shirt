@@ -524,3 +524,25 @@ body.fade-in {
     font-size: 18px;
     color: #444;
 }
+
+
+
+/* UNTUK CHECKOOUT */
+.checkout-form input,
+.checkout-form textarea,
+.checkout-form select {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#checkout {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
