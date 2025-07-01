@@ -5,27 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HERMOSA ESTRELLA</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href = "https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>H R M S</h1>
+            <div class = "brand">
+                <img src = "logo.png" alt = "HRMS Logo" class = "logo">
+                <h1>H R M S</h1>
+            </div>
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#produk">Produk</a></li>
                     <li><a href="#tentang">About Us</a></li>
-                    <li><a href="#keranjang">Keranjang <span id="cart-count">(0)</span></a></li> </ul>
+                    <li><a href="#keranjang">
+                        <i class = "fas fa-shopping-cart"></i>
+                        <span id = "cart-count">(0)</span>
+                    </a></li>
             </nav>
         </div>
     </header>
 
     <main>
         <section id="hero">
-            <div class="container">
+            <div class="container hero-content">
+                <img src = "logo.png" alt = "HRMS Logo" class = "hero-logo">
                 <h2>Hermosa Estrella</h2>
                 <p>Hermosa Look Of The Day</p>
                 <a href="#produk" class="btn">Lihat Produk</a>
+            </div>
+        </section>
+
+        <section id = "intro">
+            <div class = "container">
+                <h2>Temukan gaya Terbaikmu</h2>
+                <p>New look, new you! Koleksi terbaru kami siap menyambut gaya barumu.</p>
             </div>
         </section>
 
@@ -114,6 +130,13 @@
             <p>&copy; Hermosa Estrella</p>
         </div>
     </footer>
+    <section id = "testimonials">
+        <div class = "container">
+            <h2>What our Customers Say</h2>
+            <blockquote>"The clothes are comfortable and stylish!" - Merlina</blockquote>
+            <blockquote>"Fast shipping and great quality!" - Kenzie</blockquote>
+        </div>
+    </section>
 
     <script src="script.js"></script> </body>
 </html>
