@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Data Produk (Simulasi Database) ---
+    // Data Produk (Simulasi Database) 
     const productsData = [
         { id: 'V1', name: 'HRMS V1', price: 150000, image: 'V1.png', description: 'Kemeja kasual terbaik untuk gaya sehari-hari Anda.' },
         { id: 'V2', name: 'HRMS V2', price: 180000, image: 'V2.png', description: 'Celana jeans modern dengan potongan ramping dan nyaman.' },
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { id: 'V4', name: 'HRMS V4', price: 350000, image: 'V4.png', description: 'Jaket kulit premium untuk tampilan yang edgy dan berkelas.' }
     ];
 
-    // --- Elemen DOM Umum ---
+    //  Elemen DOM Umum 
     const cartCountSpans = document.querySelectorAll('#cart-count, #cart-count-detail');
     const addToCartButtons = document.querySelectorAll('.add-to-cart, .add-to-cart-detail');
     const productList = document.getElementById('product-list');
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartTotalSpan = document.getElementById('cart-total');
     const clearCartBtn = document.querySelector('.clear-cart-btn');
 
-    // --- Fungsi Bantuan ---
+    // Fungsi Bantuan 
 
     // Mengambil keranjang dari Local Storage
     const getCart = () => {
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         cartTotalSpan.textContent = total.toLocaleString('id-ID');
     };
 
-    // --- Event Listeners ---
+    // Event Listeners 
 
     // Menangani klik tombol "Tambah ke Keranjang"
     addToCartButtons.forEach(button => {
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Fungsi Sorting Produk ---
+    // Fungsi Sorting Produk 
     if (sortPriceSelect && productList) {
         sortPriceSelect.addEventListener('change', (e) => {
             const sortBy = e.target.value;
@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Penanganan Tampilan Keranjang (Saat navigasi diklik) ---
+    // Penanganan Tampilan Keranjang (Saat navigasi diklik) 
     const keranjangNavLink = document.querySelector('header nav ul li a[href="#keranjang"]');
     if (keranjangNavLink) {
         keranjangNavLink.addEventListener('click', (e) => {

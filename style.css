@@ -1,5 +1,4 @@
 /* General Styling */
-/* General Styling */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -13,7 +12,6 @@ body {
     padding: 20px 0;
 }
 
-/* Header */
 header {
     background-color: #333;
     backdrop-filter: blur(8px);
@@ -63,12 +61,11 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: #ffffff; /* Gold color for hover */
+    color: #ffffff; 
 }
 
-/* Hero Section */
 #hero {
-    background: linear-gradient(to left, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-banner.jpg') no-repeat right center;/* Ganti dengan gambar latar belakang Anda */
+    background: linear-gradient(to left, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-banner.jpg') no-repeat right center;
     background-size: cover;
     color: #fff;
     text-align: center;
@@ -110,15 +107,14 @@ header nav ul li a:hover {
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    border: none; /* Add border none for consistency */
-    cursor: pointer; /* Add cursor pointer */
+    border: none; 
+    cursor: pointer; 
 }
 
 .btn:hover {
     background-color: #e04848;
 }
 
-/* Intro Section */
 #intro {
     background-color: #fdfdfd;
     text-align: center;
@@ -136,7 +132,7 @@ header nav ul li a:hover {
     max-width: 700px;
     margin: 0 auto;
 }
-/* Product Section */
+
 #produk, #tentang, #kontak, #keranjang, #faq, #product-detail {
     padding: 50px 0;
     background-color: #fff;
@@ -151,11 +147,10 @@ header nav ul li a:hover {
     color: #333;
 }
 
-/* Filter Controls */
 .filter-controls {
     text-align: right;
     margin-bottom: 20px;
-    padding-right: 20px; /* Adjust padding as needed */
+    padding-right: 20px; 
 }
 
 .filter-controls label {
@@ -183,9 +178,9 @@ header nav ul li a:hover {
     text-align: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
-    display: flex; /* Make it a flex container */
-    flex-direction: column; /* Stack children vertically */
-    justify-content: space-between; /* Push button to bottom */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
 }
 
 .product-item:hover {
@@ -194,8 +189,8 @@ header nav ul li a:hover {
 
 .product-item img {
     max-width: 100%;
-    height: 200px; /* Fixed height for consistency */
-    object-fit: contain; /* Ensure image fits without distortion */
+    height: 200px; 
+    object-fit: contain; 
     margin-bottom: 15px;
     transition: transform 0.3s ease;
 }
@@ -225,26 +220,24 @@ header nav ul li a:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: auto; /* Push button to the bottom */
+    margin-top: auto; 
 }
 
 .product-item button:hover {
     background-color: #364454;
 }
 
-.product-item a { /* Style for links around product images */
+.product-item a { 
     text-decoration: none;
-    color: inherit; /* Inherit color from parent */
+    color: inherit; 
 }
 
-/* About Us Section */
 #tentang p {
     text-align: center;
     font-size: 18px;
     line-height: 1.6;
 }
 
-/* Contact Section */
 #kontak ul {
     list-style: none;
     padding: 0;
@@ -256,7 +249,6 @@ header nav ul li a:hover {
     font-size: 18px;
 }
 
-/* FAQ Section */
 #faq .faq-item {
     background-color: #f0f0f0;
     padding: 15px 20px;
@@ -268,17 +260,15 @@ header nav ul li a:hover {
 #faq .faq-item h3 {
     margin-top: 0;
     color: #162e47;
-    cursor: pointer; /* Indicate it's clickable for future accordion */
+    cursor: pointer; 
 }
 
 #faq .faq-item p {
     margin-bottom: 0;
     line-height: 1.6;
-    /* For future accordion, can be display: none; */
+    
 }
 
-
-/* Shopping Cart Section */
 #keranjang {
     background-color: #e9ecef;
 }
@@ -363,8 +353,6 @@ header nav ul li a:hover {
     background-color: #e6e3e3;
 }
 
-
-/* Product Detail Page */
 #product-detail .product-detail-container {
     display: flex;
     gap: 40px;
@@ -439,12 +427,10 @@ header nav ul li a:hover {
     background-color: #5a6268;
 }
 
-/* Utility Classes */
 .hidden {
     display: none;
 }
 
-/* Footer */
 footer {
     background-color: #333;
     color: #fff;
@@ -454,7 +440,6 @@ footer {
     border-radius: 8px;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .container {
         width: 90%;
